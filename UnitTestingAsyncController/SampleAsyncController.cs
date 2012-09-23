@@ -9,19 +9,19 @@ namespace UnitTestingAsyncController
         {
             AsyncManager.OutstandingOperations.Increment();
 
-            // some asynchronous operation
+            // here goes asynchronous operation
             new Thread(() =>
             {
                 Thread.Sleep(100);
 
-                // do some async long operation like ... calculate square number
+                // do some async long operation like ... 
+                // calculate square number
                 AsyncManager.Parameters["result"] = number * number;
                 
-                // decrementing OutstandingOperations to value 0 will execute Finished
-                // EventHandler on AsyncManager
+                // decrementing OutstandingOperations to value 0 
+                // will execute Finished EventHandler on AsyncManager
                 AsyncManager.OutstandingOperations.Decrement();
             }).Start();
-
         }
 
         public JsonResult SquareOfCompleted(int result)

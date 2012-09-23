@@ -39,12 +39,16 @@
     <Reference Include="Machine.Specifications">
       <HintPath>..\packages\Machine.Specifications.0.5.9-beta2\lib\net40\Machine.Specifications.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.1\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsyncControllerExtensions.cs" />
-    <Compile Include="SampleAsyncControllerTest.cs" />
+    <Compile Include="SampleAsyncControllerNunitTest.cs" />
+    <Compile Include="SampleAsyncControllerMSpecTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleAsyncController.cs" />
   </ItemGroup>
