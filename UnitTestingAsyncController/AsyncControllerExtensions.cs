@@ -11,8 +11,8 @@ namespace UnitTestingAsyncController
         /// When asynchronous operation is called it blocks current thread until
         /// asynchronous operation is finished with processing.
         /// </summary>
-        /// <param name="actionAsync">Asynchronous operation</param>
-        /// <param name="actionCompleted"></param>
+        /// <param name="actionAsync">Asynchronous action</param>
+        /// <param name="actionCompleted">Action that should be executed after asynchronous action finishes processing</param>
         public static void ExecuteAsync(this AsyncController asyncController, Action actionAsync, Action actionCompleted)
         {
             var trigger = new AutoResetEvent(false);
